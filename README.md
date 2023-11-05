@@ -10,10 +10,8 @@ CLI tool that wraps and empowers **CursedSpirits** with some hot-reloads and amp
 
 > **Yet the power is again derived from an anime. Empower CursedSpirits with some silverine. Mix up Gojo with his teenage mutant version^^.**
 
-> Made for and tested throughoutly on Ubuntu OS
-
 # Supported OS
-Working on Ubuntu only. Throughoutly tested and supported for Ubuntu.
+Works on Debain based linux distributions
 
 # Installation
 > Install CursedSpirits into ``$HOME/CursedSpirits`` and navigate to this directory then
