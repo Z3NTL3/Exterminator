@@ -1,5 +1,6 @@
 # Exterminator
 CLI tool that wraps and empowers **CursedSpirits** with some hot-reloads and amplifications.
+> Keep in mind; Exterminator is for educational purposes only and I am not responsable for anything you or it may cause.
 
 ### Features
 - [ ] Installer to install CursedSpirits globally
