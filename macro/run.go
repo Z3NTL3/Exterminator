@@ -86,6 +86,7 @@ func (c *Client) Run(cmd CmdCtx, out io.Writer, ctx context.Context, done chan i
 	}
 
 	if err := command.Wait(); err != nil {
+		// process kill; after refresh ratio accomplisment
 		command.Stderr.Write([]byte(err.Error()))
 		command.Stderr.Write([]byte("\x1b[1m[INFO] \x1b[0mRefreshing proxies and attack!\r\n"))
 		done <- 1
