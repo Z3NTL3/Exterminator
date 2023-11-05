@@ -2,8 +2,8 @@
 CLI tool that wraps and empowers **CursedSpirits** with some hot-reloads and amplifications.
 
 ### Features
-- Installer to install CursedSpirits globally
-- Refresh CursedSpirits ongoing attacks automatically with new proxies and the given interval refresh ratio; allowing you to down a website limitless, even if the proxies get's banned
+- [ ] Installer to install CursedSpirits globally
+- [x] Refresh CursedSpirits ongoing attacks automatically with new proxies and the given interval refresh ratio; allowing you to down a website limitless, even if the proxies get's banned
 
 <img src="https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2023/08/ragnacrimson_trailer3screenshot.png?fit=1920%2C1080&ssl=1" width="600">
 
