@@ -28,4 +28,4 @@ Working on Ubuntu only. Throughoutly tested and supported for Ubuntu.
 # Usage
 Keep in mind that the hot-reload uses public proxies and not local ones, soon a pipe stream functionality for custom proxies will be released.
 
-``./exterminator --cmd "--url https://target.com" --refresh 25``
+``./exterminator --cmd "--url https://target.com" --refresh 25 --bin ./CursedSpirits``
