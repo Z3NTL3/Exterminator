@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 	"time"
-
+        "path"
 	"z3ntl3/exterminator/cmd"
 	"z3ntl3/exterminator/globals"
 	"z3ntl3/exterminator/macro"
@@ -15,6 +15,10 @@ import (
 func main() {
 	cmd.Init()
 	if err := cmd.RootCmd.Execute(); err != nil {
+		log.Fatal(err)
+	}
+
+	if err := os.Chdir(path.Dir(*globals.ClientArgs.Bin)); err != nil {
 		log.Fatal(err)
 	}
 
