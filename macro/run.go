@@ -2,6 +2,7 @@ package macro
 
 import (
 	"context"
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -58,6 +59,7 @@ func (c *Client) RunInstallationCmd(cmd CmdCtx, out io.Writer, id int) {
 // Scan and check if any error occured on the installation process
 func (c *Client) containsErr() bool {
 	if c.Err != nil && c.Err != io.EOF {
+		fmt.Println(c.Err)
 		return true
 	}
 	return false
@@ -66,12 +68,12 @@ func (c *Client) containsErr() bool {
 func (c *Client) Run(cmd CmdCtx, out io.Writer, ctx context.Context, done chan int) {
 	if err := exec.Command(cmd.Name, "scrape").Run(); err != nil {
 		out.Write([]byte(err.Error()))
-		log.Fatal(err)
+		return
 	}
 
 	if err := exec.Command("bash", "-c", "-n", "999999").Run(); err != nil {
 		out.Write([]byte(err.Error()))
-		log.Fatal(err)
+		return
 	}
 
 	command := exec.CommandContext(ctx, cmd.Name, cmd.Args...)
@@ -83,6 +85,7 @@ func (c *Client) Run(cmd CmdCtx, out io.Writer, ctx context.Context, done chan i
 	if err := command.Start(); err != nil {
 		command.Stderr.Write([]byte(err.Error()))
 		done <- 1
+		return
 	}
 
 	if err := command.Wait(); err != nil {
